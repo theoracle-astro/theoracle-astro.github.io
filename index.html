@@ -5,6 +5,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	
+						
 	<head>
 		<title>The Oracle</title>
 		<meta charset="utf-8" />
@@ -12,7 +14,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -73,7 +75,8 @@
 								function check(form)/*function to check userid & password*/
 									{
 									/*the following code checkes whether the entered userid and password are matching*/
-									 if(form.userid.value == "test" && form.pswrd.value == "1")
+									var password = readFileSync('password.txt').toString();
+									 if(form.userid.value == "test" && form.pswrd.value == password)
 										 {
 											window.open('oracle_tool.html')/*opens the target page while Id & password matches*/
 											}
@@ -100,7 +103,7 @@
 					<footer id="footer">
 						<div class="inner">
 							<section>
-								<h2> TEST Created by Sara Webb for the use of the OzGrav comminuty </h2>
+								<h2> Created by Sara Webb for the use of the OzGrav comminuty </h2>
 								<h2> Contact: swebb@swin.edu.au </h2> 
 								
 							</section>
